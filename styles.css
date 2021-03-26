@@ -1,0 +1,1217 @@
+.container{
+    display:grid;
+    height:300vh;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 0.3fr 3.2fr 4fr 8fr 8fr 8fr 8fr 1fr 1.4fr;
+    grid-template-areas: 
+    "nav nav nav nav" 
+    "main main main main" 
+    "filters show show show" 
+    "filters content1 content2 content3" 
+    "filters content4 content5 content6" 
+    "filters content7 content8 content9" 
+    "filters content10 content11 content12" 
+    "filters detail detail detail" 
+    "filters detail detail detail" 
+    "filters detail detail detail" 
+    "footer1 footer1 footer1 footer1";
+    grid-gap: 0.3rem;
+}
+
+/* Font */
+
+.overpass {
+    font-family: 'Overpass', sans-serif;
+}
+
+
+/* Navigation */
+nav {
+    background: white;
+    grid-area:nav;
+}
+.nav-container {
+    position: absolute;
+    height: 75px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+   /* Inside Auto Layout */
+    flex: none;
+    order: 6;
+    flex-grow: 0;
+    font-family: Helvetica;
+    color: #55595D;
+    margin: 0px;
+}
+
+
+nav ul {
+    display: flex;
+}
+.nav-items li {
+    list-style: none;
+    margin-right: 1px;
+}
+
+.nav-items li:nth-last-of-type(1) {
+    margin: 0;
+}
+.nav-items li a {
+    color: #55595D;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+}
+nav .logo {
+    display: inline-block;
+    max-width: 160px;
+    
+}
+
+.call {
+    background-color: #82F7FF;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    margin-right: -20px;
+}
+
+.email {
+    background-color: #82F7FF;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+/* Navigation End */
+
+.show{
+    grid-area: show;
+      
+}
+
+.weight{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.all {
+    background-color: #7572FF;
+    border: none;
+    padding: 6px 16px 6px 16px;
+    border-radius: 18px;
+    margin-right: 4px;
+    margin-left: 20px;
+}
+
+.used {
+    background-color: white;
+    border-radius: 1px;
+    border-style:solid;
+    border-color: #E5E5E5;
+    padding: 6px 16px 6px 16px;
+    margin-right: 4px;
+    border-radius: 18px;
+}
+
+.new {
+    background-color: white;
+    border-radius: 1px;
+    border-style:solid;
+    border-color: black;
+    padding: 4px 16px 4px 16px;
+    border-radius: 18px;
+    margin-right: 4px;
+    margin-left: 0px;
+}
+
+.offers {
+    background-color: white;
+    border-radius: 1px;
+    border-style:solid;
+    border-color: #E5E5E5;
+    padding: 4px 16px 4px 16px;
+    border-radius: 18px;
+    margin-right: 4px;
+    margin-left: 0px;
+}
+
+.offers {
+    background-color: white;
+    border-radius: 1px;
+    border-style:solid;
+    border-color: #E5E5E5;
+    padding: 4px 16px 4px 16px;
+    border-radius: 18px;
+    margin-right: 4px;
+    margin-left: 0px;
+}
+
+.lowest {
+    float: right;
+    background-color: white;
+    border-radius: 1px;
+    border-style:solid;
+    border-color: #E5E5E5;
+    padding: 4px 16px 4px 16px;
+    border-radius: 18px;
+    margin-right: 4px;
+    margin-left: 0px;
+}
+
+.weight {
+    font-weight: 500;
+}
+
+.main{
+    background: #3F3A50;
+    border-radius: 0px 0px 0px 25px;
+    grid-area:main;
+}
+
+.main_grey{
+    background: #534F60;
+    width: 22%;
+    height: 100%;
+    border-radius: 0px 10px 120px 25px;
+    grid-area:main;
+}
+#filters{
+    background: white;
+    padding: 5px;
+    margin-left: 15px;
+    margin-right: 30px;
+    grid-area:filters;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+.filters-caps {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 9px;
+    line-height: 18px;
+    color: #A2A9AF;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+.filters-lower {
+    margin-top: 20px;
+    margin-left: 14px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+.filters-purple {
+    border-radius: 16px;
+    color: white;
+    background-color: #7572FF;
+    border-color: #7572FF;
+    border-style: solid;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 14px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+.filters-min {
+    margin-left: 14px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 24px;
+    background-color: white;
+}
+.filters-grey {
+    margin-top: 20px;
+    margin-left: 14px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #A2A9AF;
+    line-height: 24px;
+}
+.filters-greyed {
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #A2A9AF;
+    line-height: 24px;
+    color: black;
+    background-color: #F6F7FB;
+    border-radius: 10%;
+    padding: 4px;
+    max-width: 90px;
+    padding: 5px;
+}
+.filters-min {
+    margin-top: 20px;
+    margin-left: 14px;
+    font-family: Verdana;
+    font-weight: 500;
+    font-size: 14px;
+    border-color: rgba(126, 126, 126, 0.24);
+    border-width: 2px;
+    line-height: 24px;
+    border-radius: 10%;
+    border-style: solid;
+    padding: 10px;
+}
+
+#sidebar{
+    background: white;
+    grid-area:sidebar;
+}
+#sidebar-caps {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 18px;
+    color: #A2A9AF;
+   /* identical to box height, or 150% */
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+.button1{
+    border-radius: 16px;
+    float: right;
+    color: #f76565;
+    background-color: #ffdbdb;
+    border: none;
+    padding: 6px;
+}
+.button2{
+    border-radius: 16px;
+    border-color: #bbbbbbc5;
+    border-width: 1px;
+    border-style: solid;
+    float: right;
+    background-color: white;
+    color: #E5E5E5;
+}
+.button3{
+    border-radius: 16px;
+    border-color: #f5f5f5;
+    border-style: solid;
+    float: right;
+    background-color: white;
+    color: #E5E5E5;
+}
+.button4{
+    border-radius: 16px;
+    border-color: #7572FF;
+    border-style: solid;
+    float: right;
+    background-color: white;
+    color: #7572FF;
+}
+.button5{
+    padding: 5px;
+    margin: 8px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button5_2{
+    padding: 5px;
+    margin: 8px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button5_3{
+    padding: 5px;
+    margin: 8px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button6{
+    padding: 2px 6px 2px 6px;
+    margin-left: -52px;
+    margin-top: 218px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button6_2{
+    padding: 2px 6px 2px 6px;
+    margin-left: -52px;
+    margin-top: 218px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button6_3{
+    padding: 2px 6px 2px 6px;
+    margin-left: -52px;
+    margin-top: 218px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button7{
+    padding: 2px 6px 2px 6px;
+    margin-left: 4px;
+    margin-top: 218px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button7_2{
+    padding: 2px 6px 2px 6px;
+    margin-left: 4px;
+    margin-top: 218px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button7_3{
+    padding: 2px 6px 2px 6px;
+    margin-left: 4px;
+    margin-top: 218px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button8{
+    padding: 2px 6px 2px 6px;
+    margin-left: 4px;
+    margin-top: 218px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button8_2{
+    padding: 2px 6px 2px 6px;
+    margin-left: 4px;
+    margin-top: 218px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button8_3{
+    padding: 2px 6px 2px 6px;
+    margin-left: 4px;
+    margin-top: 187.5px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+
+.button9{
+    padding: 2px 6px 2px 6px;
+    margin-left: 4px;
+    margin-top: 218px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.button9_3{
+    padding: 2px 5px 2px 5px;
+    margin-top: 182px;
+    margin-left: 4px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+    float: left;
+    background-color: #3F3A50;
+    color: #E5E5E5;
+}
+.shadow {
+    box-shadow: 5px 5px 5px 5px #E4E4E4;
+}
+.content1{
+    grid-area:content1;
+    background: white;
+    border-radius: 12px;
+    background-image: url(images/listing-mercedes-benz.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.content1_text{
+    grid-area:content1;
+    border-radius: 12px;
+    display: block;
+    padding-top: 250px;
+    width: auto;
+
+   
+}
+.content1_text_below{
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 500;
+}
+.content1_text_below2{
+    margin-top: -12px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: #55595D;
+    font-weight: 400;
+}
+.content1_text_below3{
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: normal;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: -2px;
+}
+.content1_text_below4{
+    margin-left: 2px;
+    font-style: normal;
+    color: black;
+    font-size: 18px;
+    margin-top: -2px;
+    font-weight: 400;
+}
+.content1_text_below5 {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 400;
+}
+.content1_text_below6 {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: #7572FF;
+    font-weight: 400;
+}
+.content1_logo_container{
+    border-radius: 12px;
+    width: 100%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+.content1_logo_container img{
+    border-radius: 12px;
+    margin-left: 40px;
+    width: 120px;
+    height: auto;
+}
+.float_right{
+    float: right;
+    padding-right: 18px;
+}
+.content2{
+    grid-area:content2;
+    background: white;
+    border-radius: 12px;
+    background-image: url(images/listing-peugeot.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.content2_text{
+    grid-area:content2;
+    border-radius: 12px;
+    display: block;
+    padding-top: 250px;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+
+}
+.content2_text_below{
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 500;
+}
+.content2_text_below2{
+    margin-top: -12px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: #55595D;
+    font-weight: 400;
+}
+.content2_text_below3{
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: normal;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: -2px;
+}
+.content2_text_below4{
+    margin-left: 2px;
+    font-style: normal;
+    color: black;
+    font-size: 18px;
+    margin-top: -2px;
+    font-weight: 400;
+}
+.content2_text_below5 {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 400;
+}
+.content2_text_below6 {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: #7572FF;
+    font-weight: 400;
+}
+.content3{
+    background: white;
+    border-radius: 12px;
+    grid-area:content3;
+    background-image: url(images/listing-renault.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.content3_text{
+    border-radius: 12px;
+    display: block;
+    padding-top: 250px;
+    width: 100%;
+    height: 114px;
+    grid-area:content3;
+}
+.content3_text_below{
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 500;
+}
+.content3_text_below2{
+    margin-top: -12px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: #55595D;
+    font-weight: 400;
+}
+.content3_text_below3{
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: normal;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: -2px;
+}
+.content3_text_below4{
+    margin-left: 2px;
+    font-style: normal;
+    color: black;
+    font-size: 18px;
+    margin-top: -2px;
+    font-weight: 400;
+}
+.content3_text_below5 {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 400;
+}
+.content3_text_below6 {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: #7572FF;
+    font-weight: 400;
+}
+.pink {
+    color:#F87B7B 
+}
+.grey {
+    color: #55595D;
+}
+.linethrough {
+    text-decoration: line-through 
+}
+.one {
+    float: right;
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    padding-right: 8px;
+    padding-top: 17px;
+}
+.chevronleft {
+    float: right;
+    padding-right: 5px;
+    padding-left: 4px;
+    margin-top: 10px;
+}
+.chevronright {
+    float: right;
+    margin-right: -110x;
+    margin-top: 10px;
+}
+.content4{
+    background: white;
+    border-radius: 12px;
+    grid-area:content4;
+    background-image: url(images/listing-peugeot.png);
+    background-repeat: no-repeat;
+    width: 320px;
+}
+.content4_text{
+    border-radius: 12px;
+    display: block;
+    padding-top: 250px;
+    width: 100%;
+    height: 114px;
+    grid-area:content4;
+}
+.content4_text_below{
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 500;
+}
+
+.content4_text_below2{
+    margin-top: -12px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: #55595D;
+    font-weight: 400;
+}
+.content4_text_below3{
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: normal;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: -2px;
+}
+.content4_text_below4{
+    margin-left: 2px;
+    font-style: normal;
+    color: black;
+    font-size: 18px;
+    margin-top: -2px;
+    font-weight: 400;
+}
+
+.content4_text_below5 {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 400;
+}
+.content4_text_below6 {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: #7572FF;
+    font-weight: 400;
+}
+
+.content5{
+    background: #F6F7FB;
+    grid-area:content5;
+}
+
+.content5_wrap {
+    width: 80%;
+}
+
+.content5_heading{
+    border-radius: 12px;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    padding-top: 50px;
+    width: 100%;
+    height: 114px;
+    grid-area:content5 
+}
+
+.content5_sub{
+    display: block;
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 33px;
+    margin-right: 33px;
+    grid-area:content5 
+}
+
+.content5_small{
+    display: block;
+    text-align: left;
+    font-weight: normal;
+    font-size: 12px;
+    margin-left: 33px;
+    margin-right: 33px;
+    grid-area:content5 
+}
+.red {
+    color: red;
+}
+
+.VRM {
+    border-style: none;
+    width: 80%;
+    padding: 8px;
+    line-height: 20px;
+}
+
+.top {
+    padding-top: 10px;
+}
+
+.mileage{
+    border-style: none;
+    width: 80%;
+    padding: 8px;
+    line-height: 20px;
+}
+
+.value {
+    border-radius: 16px;
+    color: white;
+    background-color: #7572FF;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    width: 80%;
+    height: 50px;
+    margin-top: 20px;
+} 
+
+
+.content6{
+    background: white;
+    border-radius: 12px;
+    grid-area:content6;
+    background-image: url(images/listing-mercedes-benz.png);
+    background-repeat: no-repeat;
+    width: 320px;
+}
+
+.content6_text{
+    border-radius: 12px;
+    display: block;
+    padding-top: 250px;
+    width: 100%;
+    height: 114px;
+    grid-area:content6;
+}
+.content6_text_below{
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 500;
+}
+.content6_text_below2{
+    margin-top: -12px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: #55595D;
+    font-weight: 400;
+}
+.content6_text_below3{
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: normal;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: -2px;
+}
+.content6_text_below4{
+    margin-left: 2px;
+    font-style: normal;
+    color: black;
+    font-size: 18px;
+    margin-top: -2px;
+    font-weight: 400;
+}
+.content6_text_below5 {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 400;
+}
+.content6_text_below6 {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: #7572FF;
+    font-weight: 400;
+}
+.content6_logo_container{
+    border-radius: 12px;
+    width: 100%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+.content6_logo_container img{
+    border-radius: 12px;
+    margin-left: 40px;
+    width: 120px;
+    height: auto;
+}
+
+.content7{
+    background: white;
+    border-radius: 12px;
+    grid-area:content7;
+    background-image: url(images/listing-renault.png);
+    background-repeat: no-repeat;
+    width: 320px;
+}
+.content8{
+    background: white;
+    border-radius: 12px;
+    grid-area:content8;
+    background-image: url(images/listing-mercedes-benz.png);
+    background-repeat: no-repeat;
+    width: 320px;
+}
+
+.content8_text{
+    border-radius: 12px;
+    display: block;
+    padding-top: 250px;
+    width: 100%;
+    height: 114px;
+    grid-area:content8;
+}
+
+.content9{
+    background: white;
+    border-radius: 12px;
+    grid-area:content9;
+    background-image: url(images/listing-peugeot.png);
+    background-repeat: no-repeat;
+    width: 320px;
+}
+.content9_text{
+    grid-area:content9;
+    border-radius: 12px;
+    display: block;
+    padding-top: 250px;
+    width: 100%;
+    height: 114px;
+
+}
+.content10{
+    background: white;
+    border-radius: 12px;
+    grid-area:content10;
+    background-image: url(images/listing-mercedes-benz.png);
+    background-repeat: no-repeat;
+    width: 320px;
+}
+
+.content10_text{
+    grid-area:content10;
+    border-radius: 12px;
+    display: block;
+    padding-top: 250px;
+    width: 100%;
+    height: 114px;
+
+}
+.content11{
+    background: white;
+    border-radius: 12px;
+    grid-area:content11;
+    background-image: url(images/listing-peugeot.png);
+    background-repeat: no-repeat;
+    width: 320px;
+}
+.content11_text{
+    grid-area:content11;
+    border-radius: 12px;
+    display: block;
+    padding-top: 250px;
+    width: 100%;
+    height: 114px;
+
+}
+.content12{
+    background: white;
+    border-radius: 12px;
+    grid-area:content12;
+    background-image: url(images/listing-renault.png);
+    background-repeat: no-repeat;
+    width: 320px;
+}
+
+.content12_text{
+    border-radius: 12px;
+    display: block;
+    padding-top: 250px;
+    width: 100%;
+    height: 114px;
+    grid-area:content12;
+}
+.content12_text_below{
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: Helvetica;
+    font-style: normal;
+    color: black;
+    font-weight: 500;
+}
+
+
+footer1{
+    background: #282338;
+    grid-area:footer1;
+    color: white;
+    display: block;
+    overflow: hidden;
+    padding: 30px 0;
+    padding-bottom: 30px;
+}
+.inner_footer{
+    display: block;
+    margin: 0 auto;
+    width: 1100px;
+    height: 100%;
+}
+.inner_footer .logo_container{
+    width: 30%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+.inner_footer .logo_container img{
+    margin-left: 40px;
+    width: 120px;
+    height: auto;
+}
+.inner_footer .footer_fifth{
+    width: calc(20.6666666667%- 20px);
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+}
+.inner_footer .footer_fifth:last-child{
+    margin-right: 0;
+}
+.inner_footer .footer_fifth h1 {
+    font-family: Helvetica;
+    font-size: 10px;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.inner_footer .footer_fifth h2 {
+    font-family: Helvetica;
+    font-size: 8.6px;
+    color: #282338;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.inner_footer .footer_fifth p {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 9px;
+    line-height: 18px;
+    color: #A2A9AF;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+.inner_footer .footer_fifth ad {
+    font-family: Helvetica;
+    font-size: 10px;
+    color: white;
+    font-weight: 200;
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+}
+.inner_footer .footer_fifth gd {
+    font-family: Helvetica;
+    font-size: 10px;
+    color: #A2A9AF;
+    font-weight: 200;
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+}
+.inner_footer .footer_fifth a {
+    font-family: Helvetica;
+    font-size: 10px;
+    color: #7572FF;
+    font-weight: 200;
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+}
+footer2{
+    background: #3F3A50;
+    grid-area:footer2;
+    width: 1100px;
+}
+detail{
+    background: white;
+    grid-area:detail;
+}
+
+ /* @media only screen and (max-width:550px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: "nav" "sidebar" "main" "content1" "content2" "content3" "footer" 
+   } */
+
+
+   @media only screen and (max-width:500px) {
+    .container{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-rows: 0.4fr 0.4fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas: "nav"  "content1" "content2" "content3" "content4" "content5" "content6" "content7" "content8" "content9" "content10" "content11" "content12"  "footer";
+        grid-template-areas: 
+        "nav nav nav nav" 
+        "content1 content2 content3" 
+        "content4 content5 content6" 
+        "content7 content8 content9" 
+        "content10 content11 content12" 
+        "footer1 footer1 footer1 footer1"; 
+   }
+} 
+
